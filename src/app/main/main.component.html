@@ -1,0 +1,58 @@
+<div class="container">
+
+    <div class="leftpane">
+        <h1>Cybage Employees</h1>
+        <ul>
+            <li *ngFor="let name of student">
+               {{name}}
+        </li>
+        </ul>
+    </div>
+    <div class="middlepane">
+        <table>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+            </tr>
+            <tr *ngFor="let data of studentObj">
+              <td>{{data.id}}</td>
+              <td>{{data.name}}</td>
+            </tr>
+          </table>
+    </div>
+        
+    <div class="rightpane">
+        <h1><div *ngIf="isActivated">
+            Welcome to Cybage...!!!
+        </div></h1>
+
+        <input [(ngModel)]="id"/>
+        <div [ngSwitch]="id">
+            <p *ngSwitchCase="101">
+                Hello....I'm Sneha...!!!
+            </p>
+            <p *ngSwitchCase="102">
+                Hello....I'm Ritu...!!!
+            </p>
+            <p *ngSwitchCase="103">
+                Hello....I'm Nidhi...!!!
+            </p>
+            <p *ngSwitchCase="104">
+                Hello....I'm Parag...!!!
+            </p>
+            <p *ngSwitchCase="105">
+                Hello....I'm Ankit...!!!
+            </p>
+            <p *ngSwitchCase="106">
+                Hello....I'm Zeel...!!!
+            </p>
+            <p *ngSwitchCase="107">
+                Hello....I'm Netra...!!!
+            </p>
+        </div>
+
+
+
+         
+    </div>
+</div>
